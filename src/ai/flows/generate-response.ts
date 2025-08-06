@@ -30,7 +30,7 @@ const generateResponsePrompt = ai.definePrompt({
   input: {schema: GenerateResponseInputSchema},
   output: {schema: GenerateResponseOutputSchema},
   prompt: `You are ShreyasGPT, a helpful AI assistant. Respond to the following prompt.
-Your response must not contain any markdown formatting, such as asterisks (*).
+Your response must not contain any markdown formatting, such as single asterisks (*) or double asterisks (**).
 For lists, use a bold circular bullet (•) for each point.
 Ensure the entire response has clean and consistent indentation.
 
