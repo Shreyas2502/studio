@@ -1,7 +1,8 @@
 import type { Message } from "@/types";
 import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Bot, User, LoaderCircle } from "lucide-react";
+import { LoaderCircle } from "lucide-react";
+import { RobotAvatar } from "./robot-avatar";
+import { HumanAvatar } from "./human-avatar";
 
 interface ChatMessageProps {
   message: Message;
@@ -19,11 +20,7 @@ export function ChatMessage({ message, isLoading = false }: ChatMessageProps) {
       )}
     >
       {!isUser && (
-        <Avatar className="h-8 w-8 border">
-          <AvatarFallback className="bg-primary text-primary-foreground">
-            <Bot className="h-5 w-5" />
-          </AvatarFallback>
-        </Avatar>
+        <RobotAvatar />
       )}
       <div
         className={cn(
@@ -43,11 +40,7 @@ export function ChatMessage({ message, isLoading = false }: ChatMessageProps) {
         )}
       </div>
       {isUser && (
-        <Avatar className="h-8 w-8 border">
-          <AvatarFallback className="bg-card">
-            <User className="h-5 w-5 text-primary" />
-          </AvatarFallback>
-        </Avatar>
+        <HumanAvatar />
       )}
     </div>
   );
