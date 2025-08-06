@@ -19,7 +19,7 @@ export function RobotAvatar() {
                 dur="2s"
                 repeatCount="indefinite"
                 additive="sum"
-                transform-origin="16 15"
+                transformOrigin="16 15"
             />
         </rect>
         <circle cx="16" cy="15" r="2" fill="hsl(var(--primary))">

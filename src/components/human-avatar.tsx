@@ -32,7 +32,7 @@ export function HumanAvatar() {
             dur="1.5s"
             repeatCount="indefinite"
             additive="sum"
-            transform-origin="16 22"
+            transformOrigin="16 22"
             />
         </path>
       </g>
